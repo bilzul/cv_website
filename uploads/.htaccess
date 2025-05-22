@@ -1,0 +1,11 @@
+Options -Indexes
+<FilesMatch "(?i)\.(php|php3|php4|php5|phtml|pl|py|jsp|asp|htm|html|shtml|sh|cgi)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+ 
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpe?g|png|gif)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+</IfModule> 
